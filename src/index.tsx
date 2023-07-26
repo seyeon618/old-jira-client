@@ -5,14 +5,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import loadable from "@loadable/component";
 
-const Root = loadable(() => import("./pages/index"));
-
-import "./index.css";
+const Home = loadable(() => import("./pages/index"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Home />,
   },
 ]);
 

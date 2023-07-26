@@ -62,6 +62,7 @@
   ],
   "settings": {
     "react": {
+      "pragma": "React",
       "version": "detect" // make eslint-plugin-react to detect react ver. automatically
     },
     "import/parsers": {
