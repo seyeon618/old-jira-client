@@ -1,7 +1,8 @@
-import React, { SetStateAction } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
+import axios from "axios";
 
-import { StyledAutocomplete } from "@/Atoms/ComboBox/styles";
+import { StyledAutocomplete } from "@/Atoms/LabelComboBox/styles";
 
 function ComboBox({
   options,
@@ -14,20 +15,17 @@ function ComboBox({
 }): React.ReactElement {
   const onChange = (
     e: React.SyntheticEvent<Element, Event>,
-    label: unknown
+    label: string | unknown
   ) => {
-    if (typeof label === "string") {
-      setLabel(label);
-    }
+    if (typeof label === "string") setLabel(label);
   };
 
   return (
     <StyledAutocomplete
-      disablePortal
-      options={options}
+      freeSolo
       value={label}
+      options={options}
       onChange={onChange}
-      sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} />}
     />
   );
