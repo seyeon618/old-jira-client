@@ -1,32 +1,17 @@
 import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import IconButton from "@mui/material/IconButton";
 
-import { Search, SearchInput } from "./styles";
+import { Contianer } from "@/Atoms/BottomNavi/styles";
+import Driver from "@/Atoms/Driver";
 
-function SearchBar({
-  searchText,
-  setSearchText,
-  onClick,
-}: {
-  searchText: string;
-  setSearchText: React.Dispatch<React.SetStateAction<string>>;
-  onClick: () => void;
-}): React.ReactElement {
+function BottomNavi(): React.ReactElement {
   return (
-    <Search>
-      <IconButton onClick={onClick}>
-        <SearchIcon />
-      </IconButton>
-      <SearchInput
-        inputProps={{ "aria-label": "search" }}
-        value={searchText}
-        onChange={(e) => {
-          setSearchText(e.target.value);
-        }}
-      />
-    </Search>
+    <>
+      <Driver />
+      <Contianer>
+        <span>{"COPYRIGHT(C)2023 POLARIS OFFICE ALL RIGHTS RESERVED. -"}</span>
+      </Contianer>
+    </>
   );
 }
 
-export default SearchBar;
+export default BottomNavi;

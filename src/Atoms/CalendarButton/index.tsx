@@ -4,8 +4,10 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import { StyledButton } from "@/Atoms/CalendarButton/styles";
 
 function CalendarButton({
+  text,
   onClick,
 }: {
+  text: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }): React.ReactElement {
   return (
@@ -14,7 +16,7 @@ function CalendarButton({
       startIcon={<DateRangeIcon />}
       onClick={onClick}
     >
-      Creation Date
+      {text}
     </StyledButton>
   );
 }

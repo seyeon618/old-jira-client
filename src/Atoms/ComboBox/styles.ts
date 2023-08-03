@@ -1,3 +1,4 @@
+import { Popper } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import { styled } from "@mui/material/styles";
 
@@ -22,5 +23,11 @@ export const StyledAutocomplete = styled(Autocomplete)`
   .MuiOutlinedInput-notchedOutline {
     background-color: #f8f9fa;
     border: none;
+  }
+`;
+
+export const StyledPopper = styled(Popper)`
+  .MuiAutocomplete-listbox {
+    max-height: 200px;
   }
 `;

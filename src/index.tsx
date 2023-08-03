@@ -6,11 +6,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import loadable from "@loadable/component";
 
 const Home = loadable(() => import("./pages/index"));
+const Search = loadable(() => import("./pages/search/index"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/search",
+    element: <Search />,
   },
 ]);
 

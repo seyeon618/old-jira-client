@@ -1,17 +1,11 @@
 import React from "react";
 
-import { Contianer } from "@/Atoms/BottomNavi/styles";
-import Driver from "@/Atoms/Driver";
-
-function BottomNavi(): React.ReactElement {
+function Search(): React.ReactElement {
   return (
     <>
-      <Driver />
-      <Contianer>
-        <span>{"COPYRIGHT(C)2023 POLARIS OFFICE ALL RIGHTS RESERVED. -"}</span>
-      </Contianer>
+      <div>{"search page"}</div>
     </>
   );
 }
 
-export default BottomNavi;
+export default Search;

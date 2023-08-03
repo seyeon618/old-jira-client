@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 
 export const Container = styled("div")`
   width: 80%;
-  height: 100dvh;
+  height: 93vh;
   gap: 30px;
 
   display: flex;
